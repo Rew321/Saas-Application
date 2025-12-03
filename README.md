@@ -38,6 +38,15 @@ python manage.py migrate
 python manage.py runserver
 
 ```
+## Steps for Creating Tenants
+1. Open shell
+2. >>> Client press enter
+3. >>> tenant = Client(schema_name='public', name='root')
+4. >>> tenant.save()
+5. >>> domain = Domain()
+6. >>> domain.domain = 'localhost'
+7. >>> domain.tenant = tenant
+8. >>> domain.save()
 
 ### Running the Project
 
