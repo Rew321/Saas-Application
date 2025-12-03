@@ -66,6 +66,6 @@ See CONTRIBUTING.md for guidelines.
 MIT License
 
 
-![Alt text](/images/ferrari.png?raw=true "Optional Title")
+![Ferrari domain](/images/ferrari.png?raw=true "Optional Title")
 
-![Alt text](/images/volvo.png?raw=true "Optional Title")
+![Volvo domain](/images/volvo.png?raw=true "Optional Title")
