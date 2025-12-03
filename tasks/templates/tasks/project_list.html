@@ -1,0 +1,34 @@
+{% extends 'tasks/base.html' %}
+
+
+{% block content %}
+
+    <div class="container">
+        <h1>📋 Projects for <b>{{request.tenant.name}}</b></h1>
+            <h2 class="total-projects">Total Projects Found: {{ projects|length }}</h2>
+            <div class="d-flex justify-content-end mb-3">
+                <a href="{% url 'create_project' %}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Create New Project
+                </a>
+            </div>
+        <div class="projects-grid">
+            {% if projects %}
+            {% for project in projects %}
+            <div class="project-card">
+                <h2 class="project-title">{{ project.name }}</h2>
+                <p class="project-description">{{ project.description }}</p>
+                <div class="project-meta">
+                    <span class="status-badge {% if project.is_completed %}status-completed{% else %}status-pending{% endif %}">
+                        {% if project.is_completed %}✓ Completed{% else %}⏳ Pending{% endif %}
+                    </span>
+                    <span>{{ project.created_at|date:"M d, Y h:i A" }}</span>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+            <p style="color: white; text-align: center; grid-column: 1 / -1;">No projects yet.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

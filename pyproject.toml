@@ -1,0 +1,15 @@
+[project]
+name = "tenants-demo"
+version = "0.1.0"
+requires-python = ">=3.12.3"
+dependencies [
+    "Django>=5.2.8",
+    "django-environ>=0.12.0",
+    "django-extensions>=4.1",
+    "psycopg2-binary==2.9.11",
+    "django-jazzmin>=3.0.1",
+    "python-decouple>=3.8",
+
+
+
+]
